@@ -1,0 +1,43 @@
+2026-11-11 00:17:11 UTC
+Windows-10-10.0.19043-SP0
+Ren'Py 8.5.3.26051504
+
+Early init took 101 ms
+Loading error handling took 132 ms
+Loading script took 1066 ms
+Loading save slot metadata took 41 ms
+Loading persistent took 0 ms
+Set script version to: None (alternate path)
+ - Init at launcher/game/download.rpyc:22 took 314 ms.
+Running init code took 676 ms
+Loading analysis data took 7 ms
+Analyze and compile ATL took 4 ms
+Reloading save slot metadata took 5 ms
+Dump and make backups took 0 ms
+Cleaning cache took 0 ms
+Making clean stores took 1 ms
+Initial gc took 73 ms
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 8 ms
+Init translation took 1 ms
+Cleaning stores took 0 ms
+Load screen analysis took 46 ms
+Analyze screens took 2 ms
+Save screen analysis took 0 ms
+Save pyanalysis took 0 ms
+Save bytecode took 0 ms
+Running _start took 1 ms
+Interface start took 413 ms
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'Intel'
+Renderer: 'Mesa Intel(R) Iris(R) Xe Graphics (TGL GT2)'
+Version: '4.6 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.4'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(800, 600) physical=(800, 600) drawable=(800, 600)
+Maximum texture size: 4096x4096
