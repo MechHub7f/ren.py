@@ -1,35 +1,34 @@
-2026-11-12 17:48:14 UTC
+2026-11-12 19:09:46 UTC
 Windows-10-10.0.19043-SP0
 Ren'Py 8.5.3.26051504
 
-Early init took 113 ms
-Loading error handling took 150 ms
-Loading script took 1174 ms
-Loading save slot metadata took 39 ms
-Loading persistent took 0 ms
+Early init took 67 ms
+Loading error handling took 92 ms
+Loading script took 713 ms
+Loading save slot metadata took 33 ms
+Loading persistent took 1 ms
 Set script version to: None (alternate path)
- - Init at launcher/game/download.rpyc:22 took 325 ms.
-Running init code took 706 ms
-Loading analysis data took 7 ms
-Analyze and compile ATL took 3 ms
-Reloading save slot metadata took 6 ms
-Dump and make backups took 1 ms
+Running init code took 431 ms
+Loading analysis data took 4 ms
+Analyze and compile ATL took 2 ms
+Reloading save slot metadata took 11 ms
+Dump and make backups took 0 ms
 Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 75 ms
+Making clean stores took 1 ms
+Initial gc took 62 ms
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object took 8 ms
+Creating interface object took 4 ms
 Init translation took 1 ms
 Cleaning stores took 0 ms
-Load screen analysis took 48 ms
+Load screen analysis took 27 ms
 Analyze screens took 1 ms
 Save screen analysis took 0 ms
 Save pyanalysis took 0 ms
 Save bytecode took 0 ms
-Running _start took 3 ms
-Interface start took 470 ms
+Running _start took 2 ms
+Interface start took 274 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -41,8 +40,3 @@ Version: '4.6 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.4'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
 Screen sizes: virtual=(800, 600) physical=(800, 600) drawable=(800, 600)
 Maximum texture size: 4096x4096
-Traceback (most recent call last):
-  File "Z:\home\mechhub\ren.py\renpy-8.5.3-sdk\renpy\editor.py", line 99, in open
-    os.startfile(filename)  # type: ignore
-    ^^^^^^^^^^^^^^^^^^^^^^
-OSError: [WinError 193] Bad EXE format for %1: 'Z:\\home\\mechhub\\ren.py\\versions\\Who Told You That\\game\\script.rpy'
