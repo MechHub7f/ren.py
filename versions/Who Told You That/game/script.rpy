@@ -63,7 +63,7 @@ label start:
  emily "ring... ring... ring..."
  emily "asks the player a question and sender her spirling"
 
- 
- 
- # This ends the game.
+ label ending:
+    "Thanks for playing! Opening the official website now..."
+    $ renpy.run(OpenURL("https://www.youtube.com/watch?v=dPmZqsQNzGA"))
  return
