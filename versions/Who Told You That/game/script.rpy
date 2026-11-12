@@ -1,0 +1,45 @@
+﻿# The script of the game goes in this file.
+
+# Declare characters used by this game. The color argument colorizes the
+# name of the character.
+
+# adding a defualt name and am planing for players to be able to input 
+#there own name
+default backup="holder"
+define p = Character("[playerName]",color="7f7f7f")
+
+
+# The game starts here.
+
+label start:
+
+    # Show a background. This uses a placeholder by default, but you can
+    # add a file (named either "bg room.png" or "bg room.jpg") to the
+    # images directory to show it.
+
+    scene bg room
+
+    # This shows a character sprite. A placeholder is used, but you can
+    # replace it by adding a file named "eileen happy.png" to the images
+    # directory.
+
+    
+    #getting player input for name
+    $ playerName=renpy.input("what would you like to name your charictor", length=32)
+    $ playerName=playerName.strip()
+    if playerName=="":
+      $ playerName=backup
+
+
+    
+    show inputplayerimg happy
+
+    # These display lines of dialogue.
+
+    p "You've created a new Ren'Py game."
+
+    p "Once you add a story, pictures, and music, you can release it to the world!"
+
+    # This ends the game.
+
+    return
