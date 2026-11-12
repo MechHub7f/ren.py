@@ -3,6 +3,7 @@ for disinformation
 Notes:
 I plan to use assets made form itch.io
 cite is here: https://itch.io/games/tag-renpy
+game is in 1280x720
 
 current questions for mat:
  do you care about the gender or assets we use
