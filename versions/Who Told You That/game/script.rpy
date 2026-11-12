@@ -3,43 +3,56 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-# adding a defualt name and am planing for players to be able to input 
-#there own name
+##this is where we will be puting all player char
+
+#the player
 default backup="holder"
+default playername=""
 define p = Character("[playerName]",color="7f7f7f")
 
+#therapist interduses DID and stuff
+define therapist = Character("charlet")
+
+#emmily is a good frind that askes innocent questions but makes the player spriel
+define emmily = Character("emmily")
 
 # The game starts here.
 
 label start:
+# Show a background. This uses a placeholder by default, but you can
+# add a file (named either "bg room.png" or "bg room.jpg") to the
+# images directory to show it.
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+# This shows a character sprite. A placeholder is used, but you can
+# replace it by adding a file named "eileen happy.png" to the images
+# directory.
 
-    scene bg room
+ scene introduction
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+ #getting player input for name
+ $ playerName=renpy.input("what would you like to name your charictor", length=32)
+ $ playerName=playerName.strip()
+ if playerName=="":
+  $ playerName=backup
+ 
+ show therapist happy
+ # intro to the therapist and interduses DID
+ therapist "You left in a rush yesterday so i just want to go over what we talked about. You have DID. "
+ 
+ #interdusing DID
+ show player sad
+ menu:
+  "what is DID again":
+    therapist "I already told you what DID is"
 
-    
-    #getting player input for name
-    $ playerName=renpy.input("what would you like to name your charictor", length=32)
-    $ playerName=playerName.strip()
-    if playerName=="":
-      $ playerName=backup
-
-
-    
-    show inputplayerimg happy
-
-    # These display lines of dialogue.
-
-    p "You've created a new Ren'Py game."
-
-    p "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
-
-    return
+  "thank you so much":
+   therapist "ofcourse, let me know if you have anymore questions."
+  #end intro scean
+ 
+ #the plan is for a friend to call her and ask her if she asks a innicont questions on if her alter if violent and send the player into a bad mood and makes her overthink
+ scene starting of disinformation
+ emmily "ring... ring... ring..."
+ emmily "asks the player a question and sender her spirling"
+ 
+ # This ends the game.
+ return
