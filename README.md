@@ -18,3 +18,7 @@ current video game story:
  The game starts after you get diagnosed.   
 
  this is a link to the doc making sense of this: https://docs.google.com/document/d/1tCvdi7rqSp3hq4T8KrAM9_BjZMMjBF0hjdIf6q-Ty0k/edit?tab=t.gsuvqm39kg3l
+
+
+Notes for the inital story of the game:
+you start the morning waking up in bed and have just woken up.
