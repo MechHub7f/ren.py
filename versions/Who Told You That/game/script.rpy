@@ -6,16 +6,24 @@
 ##this is where we will be puting all player char
 
 #the player
-default backup="logan"
-default playername=""
-define p = Character("[playerName]",color="7f7f7f")
-#therapist interduses DID and stuff
-define therapist = Character("charlet")
+init python:
+ def create_plr(holder):
+  backup="logain"
+  if not holder:
+   return Character(backup,color="7f7f7f")
+  else:
+   return Character(backup,color="7f7f7f")
 
-#emmily is a good frind that askes innocent questions but makes the player spriel
-define emily = Character("Emily")
+label chars:
+ 
+ #therapist interduses DID and stuff
+ define tp = None
+ $ tp = create_plr("charlot")
 
-# The game starts here.
+ #emmily is a good frind that askes innocent questions but makes the player spriel
+ define emily = None
+ $ emy = create_plr("emily")
+ # The game starts here.
 
 label start:
 # Show a background. This uses a placeholder by default, but you can
@@ -25,6 +33,7 @@ label start:
 # This shows a character sprite. A placeholder is used, but you can
 # replace it by adding a file named "eileen happy.png" to the images
 # directory.
+ call chars
 
  scene images
  screen atmpt():
@@ -40,30 +49,30 @@ label start:
  #getting player input for name
  $ playerName=renpy.input("what would you like to name your charictor", length=32)
  $ playerName=playerName.strip()
- if playerName=="":
-  $ playerName=backup
+ define p = None
+ $ p = create_plr(playerName)
  
- show therapist happy
+ show tp happy
  # intro to the therapist and interduses DID
- therapist "ring... ring... ring..."
- therapist "You left in a rush yesterday [p] so i just want to go over what we talked about. You have DID. "
+ tp "ring... ring... ring..."
+ tp "You left in a rush yesterday [p] so i just want to go over what we talked about. You have DID. "
  
  #interdusing DID
  show player sad
  menu:
   "what is DID again":
-    therapist "I already told you what DID is"
+    tp "I already told you what DID is"
 
   "thank you so much":
-   therapist "ofcourse, let me know if you have anymore questions."
+   tp "ofcourse, let me know if you have anymore questions."
   #end intro scean
  
  #the plan is for a friend to call her and ask her if she asks a innicont questions on if her alter if violent and send the player into a bad mood and makes her overthink
  scene starting of disinformation
- emily "ring... ring... ring..."
- emily "asks the player a question and sender her spirling"
+ emy "ring... ring... ring..."
+ emy "asks the player a question and sender her spirling"
 
  label ending:
     "Thanks for playing! Opening the official website now..."
-    $ renpy.run(OpenURL("https://www.youtube.com/watch?v=dPmZqsQNzGA"))
+    #$ renpy.run(OpenURL("https://www.youtube.com/watch?v=dPmZqsQNzGA"))
  return
