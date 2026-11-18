@@ -4,6 +4,9 @@ Notes:
 I plan to use assets made form itch.io
 cite is here: https://itch.io/games/tag-renpy
 game is in 1280x720
+incase the game launches but does not find "who told you that" use this:
+
+cd ~/ren.py/renpy-8.5.3-sdk && ./renpy.sh ~/ren.py/versions/"Who Told You That"
 
 current questions for mat:
  do you care about the gender or assets we use

@@ -1,78 +1,88 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
 
 ##this is where we will be puting all player char
 
-#the player
-init python:
- def create_plr(holder):
-  backup="logain"
-  if not holder:
-   return Character(backup,color="7f7f7f")
-  else:
-   return Character(backup,color="7f7f7f")
+#will be using this when making a char
+label functions:
+ init python:
+  def create_plr(holder,color="7f7f7f",backup="unknown"):
+   if holder=="":
+    return Character(backup,color="#"+color)
+   else:
+    return Character(holder,color="#"+color)
+
+ return
 
 label chars:
+ #this will hold all of the chars
+ 
+ #the player
+ call functions
+ #getting player input for name
+ $ player=renpy.input("what would you like to name your charictor", length=32).strip()
+ define p = None
+ $ p = create_plr(player)
  
  #therapist interduses DID and stuff
- define tp = None
  $ tp = create_plr("charlot")
 
- #emmily is a good frind that askes innocent questions but makes the player spriel
- define emily = None
+ #emmily is a good frind that askes innocent questions but makes the player spirel
  $ emy = create_plr("emily")
- # The game starts here.
 
-label start:
+ return
+
+label phone:
+ #this is the beginning of the phone(does not work right now
+ #add "images.jpeg"
+ #imagebutton:
+    #xpos 400
+    #ypos 400
+    #idle "images.jpeg"
+    #action Return()
+ return
+
+label phonecall:
+ "ring... ring... ring..."
+ return
+
+label vars:
+ 
+ return
+
+
 # Show a background. This uses a placeholder by default, but you can
 # add a file (named either "bg room.png" or "bg room.jpg") to the
 # images directory to show it.
 
-# This shows a character sprite. A placeholder is used, but you can
-# replace it by adding a file named "eileen happy.png" to the images
-# directory.
- call chars
-
+label start:
  scene images
- screen atmpt():
-  add "images.jpeg"
-  imagebutton:
-   xpos 400
-   ypos 400
-   idle "images.jpeg"
-   action Return()
- call screen atmpt
-   
-
- #getting player input for name
- $ playerName=renpy.input("what would you like to name your charictor", length=32)
- $ playerName=playerName.strip()
- define p = None
- $ p = create_plr(playerName)
+ call functions
+ call chars
+ call phone
+ call vars
  
- show tp happy
- # intro to the therapist and interduses DID
- tp "ring... ring... ring..."
- tp "You left in a rush yesterday [p] so i just want to go over what we talked about. You have DID. "
- 
- #interdusing DID
- show player sad
- menu:
-  "what is DID again":
-    tp "I already told you what DID is"
+ $ notes = ''' 
+ TODO:
+ make phone work
+ add more functions
+ the while loop that i made has a error somewhere
 
-  "thank you so much":
-   tp "ofcourse, let me know if you have anymore questions."
-  #end intro scean
- 
- #the plan is for a friend to call her and ask her if she asks a innicont questions on if her alter if violent and send the player into a bad mood and makes her overthink
- scene starting of disinformation
- emy "ring... ring... ring..."
- emy "asks the player a question and sender her spirling"
+ '''
 
- label ending:
-    "Thanks for playing! Opening the official website now..."
-    #$ renpy.run(OpenURL("https://www.youtube.com/watch?v=dPmZqsQNzGA"))
+ #update max to amount of chapters 
+ $ chap = 1
+ $ max = 2
+ while chap <= max:
+  call expression ("chap_" + str(chap))
+  $ chap += 1
+
+label chap_1:
+ tp "wow"
+ return
+
+label chap_2:
+
+ return
+ 
+ "Thanks for playing! Opening the official website now..."
+ #$ renpy.run(OpenURL("https://www.youtube.com/watch?v=dPmZqsQNzGA"))
  return
