@@ -31,13 +31,13 @@ label chars:
  return
 
 label phone:
- #this is the beginning of the phone(does not work right now
- #add "images.jpeg"
- #imagebutton:
-    #xpos 400
-    #ypos 400
-    #idle "images.jpeg"
-    #action Return()
+ screen phone():
+  add "images.jpeg"
+  imagebutton:
+    xpos 400
+    ypos 400
+    idle "images.jpeg"
+    action Return()
  return
 
 label phonecall:
@@ -55,6 +55,7 @@ label vars:
 
 label start:
  scene images
+ call phone_discussion_test
  call functions
  call chars
  call phone
@@ -64,25 +65,32 @@ label start:
  TODO:
  make phone work
  add more functions
- the while loop that i made has a error somewhere
+ 
 
  '''
 
  #update max to amount of chapters 
- $ chap = 1
+ $ chap = 0
  $ max = 2
  while chap <= max:
   call expression ("chap_" + str(chap))
   $ chap += 1
+  if chap == max:
+   call ending
+   return
+
+label chap_0:
+ "starting"
+ return
 
 label chap_1:
- tp "wow"
+ call screen phone
  return
 
 label chap_2:
-
  return
- 
+
+label ending:
  "Thanks for playing! Opening the official website now..."
  #$ renpy.run(OpenURL("https://www.youtube.com/watch?v=dPmZqsQNzGA"))
  return
