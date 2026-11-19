@@ -1,5 +1,6 @@
 # ren.py
 for disinformation
+using this for the phone: https://github.com/Elckarow/Better-EMR-Phone
 Notes:
 I plan to use assets made form itch.io
 cite is here: https://itch.io/games/tag-renpy
